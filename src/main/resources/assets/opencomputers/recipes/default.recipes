@@ -200,6 +200,10 @@ lanCard {
   input: [["oc:cable", "oc:circuitChip1", ""]
           ["", "oc:materialCard", ""]]
 }
+ipLanCard {
+  input: [["oc:cable", "oc:circuitChip1", ""]
+          ["", "oc:materialCard", ""]]
+}
 wlanCard1 {
   input: [[torchRedstoneActive, "oc:circuitChip1", torchRedstoneActive]
           ["", "oc:materialCard", ""]]

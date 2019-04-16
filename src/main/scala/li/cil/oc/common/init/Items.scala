@@ -548,6 +548,9 @@ object Items extends ItemAPI {
     Recipes.addSubItem(new item.WirelessNetworkCard(multi, Tier.One), Constants.ItemName.WirelessNetworkCardTier1, "oc:wlanCard1")
     registerItem(new item.ComponentBus(multi, Tier.Four), Constants.ItemName.ComponentBusCreative)
 
+    // NetworkCraft additions
+    Recipes.addSubItem(new item.IpNetworkCard(multi),Constants.ItemName.IpNetworkCard,oreDict = "oc:ipNetworkCard1")
+
     // Register aliases.
     for ((k, v) <- aliases) {
       descriptors.getOrElseUpdate(k, descriptors(v))

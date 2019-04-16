@@ -205,6 +205,9 @@ object ModOpenComputers extends ModProxy {
     api.Driver.add(InventoryProviderDatabase)
     api.Driver.add(InventoryProviderServer)
 
+    //Network Craft addition
+    api.Driver.add(DriverIpNetworkCard)
+
     blacklistHost(classOf[internal.Adapter],
       Constants.BlockName.Geolyzer,
       Constants.BlockName.MotionSensor,

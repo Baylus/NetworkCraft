@@ -6,7 +6,8 @@ import li.cil.oc.api.network._
 import li.cil.oc.api.network.{Node => ImmutableNode}
 
 abstract class IpNetwork {
-  protected var addresses : Map[String, String]
+                              //UUID    IP      MAC
+  protected var addresses : Map[String, Array[String]]
 
   def getAddress(node:Node) = {
     node.address

@@ -115,6 +115,7 @@ object Constants {
     final val Interweb = "interweb"
     final val InventoryControllerUpgrade = "inventoryControllerUpgrade"
     final val InventoryUpgrade = "inventoryUpgrade"
+    final val IpNetworkCard = "ipLanCard"
     final val IronNugget = "nuggetIron"
     final val LeashUpgrade = "leashUpgrade"
     final val LinkedCard = "linkedCard"
