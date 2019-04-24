@@ -200,6 +200,12 @@ object Achievement {
     whenCrafting(Constants.ItemName.WirelessNetworkCardTier2).
     add()
 
+  val IpNetworkCard = newAchievement("ipNetworkCard").
+    at(2, -8).
+    withParent(WirelessNetworkCard).
+    whenCrafting(Constants.ItemName.IpNetworkCard).
+    add()
+
   val Cable = newAchievement("cable").
     at(-2, 0).
     whenCrafting(Constants.BlockName.Cable).

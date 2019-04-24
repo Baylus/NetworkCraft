@@ -73,6 +73,7 @@ object Present {
     add(Constants.ItemName.BatteryUpgradeTier1, 43)
     add(Constants.ItemName.NetworkCard, 38)
     add(Constants.ItemName.WirelessNetworkCardTier1, 37)
+    add(Constants.ItemName.IpNetworkCard, 38)
     add(Constants.ItemName.HDDTier1, 36)
     add(Constants.ItemName.GeneratorUpgrade, 35)
     add(Constants.ItemName.CPUTier1, 31)

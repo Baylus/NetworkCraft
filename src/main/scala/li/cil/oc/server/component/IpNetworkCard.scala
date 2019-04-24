@@ -9,7 +9,6 @@ import li.cil.oc.api.driver.DeviceInfo.DeviceAttribute
 import li.cil.oc.api.driver.DeviceInfo.DeviceClass
 import li.cil.oc.Settings
 import li.cil.oc.api
-import li.cil.oc.api.Network
 import li.cil.oc.api.component.RackBusConnectable
 import li.cil.oc.api.driver.DeviceInfo
 import li.cil.oc.api.internal.Rack
@@ -18,7 +17,7 @@ import li.cil.oc.api.machine.Callback
 import li.cil.oc.api.machine.Context
 import li.cil.oc.api.network.EnvironmentHost
 import li.cil.oc.api.network._
-import li.cil.oc.api.prefab
+import li.cil.oc.server.network.IpNetwork
 import li.cil.oc.server.{PacketSender => ServerPacketSender}
 import net.minecraft.nbt._
 
@@ -28,13 +27,24 @@ import scala.collection.mutable
 
 class IpNetworkCard(host : EnvironmentHost) extends NetworkCard(host)
 {
-  val ipAddress : String = "0.0.0.1"
+  val ipAddress : String = "0.0.0.0"
+  val macAddress : String = "00:00:00:00"
 
   @Callback(doc = """function() -- get the IP address for your IP Network Card""")
-  def getIpAddress(): String = {
-    ipAddress
+  def getIpAddress(context: Context, args: Arguments): Array[AnyRef] = {
+    result(IpNetwork.getIpAddress(node))
+
   }
 
+  @Callback(doc = """function() -- get the MAC address for your IP Network Card""")
+  def getMacAddress(context: Context, args: Arguments): Array[AnyRef] = {
+    result(macAddress)
+  }
+
+  @Callback(doc = """function() -- ask for an IP Address from the network""")
+  def retrieveIpAddress(context: Context, args: Arguments): Array[AnyRef] = {
+    result(ipAddress)
+  }
 }
 
 /*
