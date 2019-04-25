@@ -14,7 +14,7 @@ import scala.collection.convert.WrapAsScala._
 class IpNetworkCard(host : EnvironmentHost) extends NetworkCard(host)
 {
   var ipAddress : String = "0.0.0.0"
-  var macAddress : String = "00:00:00:00"
+  var macAddress : String = "00:00:00:00:00:00"
 
   @Callback(doc = """function() -- get the IP address for your IP Network Card""")
   def getIpAddress(context: Context, args: Arguments): Array[AnyRef] = {

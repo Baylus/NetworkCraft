@@ -45,7 +45,7 @@ object IpNetwork {
   //get a mac address for a uuid
   def receiveMacAddress(address: String) = {
     //really bad way of creating addresses... but a place holder for now
-    val mapping = "00:00:00:0"+nextMacAddress
+    val mapping = "00:00:00:00:00:0"+nextMacAddress
     nextMacAddress += 1
     macAddresses += (address -> mapping)
     macAddresses += (mapping -> address)
